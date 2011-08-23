@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env python
+
+import os, simplejson
+from sys import stdin
+
+try:
+	simplejson.loads(stdin.read())
+	print 'valid!'
+except Exception, e:
+	print e</string>
+	<key>fallbackInput</key>
+	<string>word</string>
+	<key>input</key>
+	<string>document</string>
+	<key>keyEquivalent</key>
+	<string>@J</string>
+	<key>name</key>
+	<string>Validate JSON</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>source.js, source.json</string>
+	<key>uuid</key>
+	<string>9D4E49CA-D065-406C-8B2F-87E9DE0292D6</string>
+</dict>
+</plist>
